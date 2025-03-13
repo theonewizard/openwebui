@@ -7,8 +7,14 @@ services:
        - "3000:8080"
     volumes:
        - open-webui:/app/backend/data
+    network:
+      macvlan_network:
+        ipv4_address:172.16.44.8
 
 volumes:
   open-webui:
 
-
+networks:
+  macvlan_network:
+    name: 'macvlan_network'
+    external: true
