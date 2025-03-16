@@ -1,11 +1,11 @@
 version: '3'
 services:
   openwebui:
-    image: ghcr.io/open-webui/open-webui:main
+    image: ghcr.io/open-webui/open-webui:latest
     ports:
-       - "3000:8080"
+      - "3000:8080"
     volumes:
-       - open-webui:/app/backend/data
+      - open-webui:/app/backend/data
     networks:
       macvlan_network:
         ipv4_address: 172.16.44.8
@@ -16,4 +16,6 @@ volumes:
 networks:
   macvlan_network:
     name: 'macvlan_network'
+    external: true
+  bridge:
     external: true
