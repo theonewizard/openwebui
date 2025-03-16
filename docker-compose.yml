@@ -9,7 +9,7 @@ services:
     networks:
       macvlan_network:
         ipv4_address: 172.16.44.8
-      bridge:
+      default:
 
 volumes:
   open-webui:
@@ -17,6 +17,4 @@ volumes:
 networks:
   macvlan_network:
     name: 'macvlan_network'
-    external: true
-  bridge:
     external: true
