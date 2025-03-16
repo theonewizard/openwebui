@@ -9,7 +9,6 @@ services:
     networks:
       macvlan_network:
         ipv4_address: 172.16.44.8
-      default:
 
 volumes:
   open-webui:
